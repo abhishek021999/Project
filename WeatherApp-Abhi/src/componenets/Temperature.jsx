@@ -6,15 +6,15 @@ function Temperature({ setCity, stats }) {
   };
   return (
     <>
-      <div className="flex align-middle justify-center">
+      <div className="flex align-middle justify-center md:flex md:flex-row md:mt-10">
         <input
           type="text"
-          className="bg-slate-600 border border-slate-500 text-slate-200 placeholder-slate-400 text-md focus:border-slate-400 block w-60 p-2 focus:outline-none"
+          className="bg-slate-600 border border-slate-500 text-slate-200 placeholder-slate-400 text-md focus:border-slate-400 block w-[50%] md:w-60 p-2 focus:outline-none"
           placeholder="Enter Your City Name"
           onChange={handleCityChange}
           defaultValue="New Delhi"
         />
-        <div className="m-4">
+        <div className="m-4 md:m-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,7 +37,7 @@ function Temperature({ setCity, stats }) {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center md:flex-col">
         {stats.isDay !== 0 ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ function Temperature({ setCity, stats }) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-14 h-14 text-yellow-300 mt-8"
+            className="w-14 h-14 text-yellow-300 mt-8 md:w-10 md:h-10"
           >
             <path
               strokeLinecap="round"
@@ -60,7 +60,7 @@ function Temperature({ setCity, stats }) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-12 h-12 text-slate-200 mt-8"
+            className="w-12 h-12 text-slate-200 mt-8 md:w-10 md:h-10"
           >
             <path
               strokeLinecap="round"
@@ -72,21 +72,22 @@ function Temperature({ setCity, stats }) {
       </div>
 
       <div className="flex justify-center items-center text-slate-200 mt-8">
-        <p className="font-semibold text-[55px] ">
+        <p className="font-semibold text-[40px] md:text-[30px]">
           {stats.temp}
-          <span className="text-[33px]">°C</span>
+          <span className="text-[25px] md:text-[20px]">°C</span>
         </p>
       </div>
 
-      <div className="flex justify-center text-slate-300 mt-8 text-[25px] ">
+      <div className="flex justify-center text-slate-300 mt-8 text-[20px] md:text-[15px]">
         {stats.condition}
       </div>
 
-      <div className="flex justify-center text-slate-400 mt-5 text-[15px]">
-        Today &#183; {stats.time} | {stats.location}
-      </div>
-    </>
-  );
+      <div className="flex justify-center text-slate-400 mt-5 text-[12px] md:text-[10px]">
+        Today &#183; {stats.time} | {} | {stats.location}
+</div>
+</>
+);
 }
 
 export default Temperature;
+

@@ -2,7 +2,10 @@ import React from "react";
 
 function Highlights({ stats }) {
   return (
-    <div className="bg-slate-600 p-2 text-slate-200 flex flex-col justify-start items-center ">
+    <div
+      className="bg-slate-600  p-2 text-slate-200 flex flex-col justify-start items-center md:p-4"
+      style={{ maxWidth: "300px", margin: "20px auto" }}
+    >
       <h2 className="text-sm mt-2">{stats.title}</h2>
       <div className="mt-2">
         {" "}
@@ -29,7 +32,7 @@ function Highlights({ stats }) {
         </div>
       ) : null}
 
-      {stats.title == "Humidity" ? (
+      {stats.title === "Humidity" ? (
         <div className="w-full mt-4 bg-gray-200 rounded-full h-1.5 mb-4 dark:bg-gray-700">
           <div
             className="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500"

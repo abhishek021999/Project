@@ -24,9 +24,10 @@ function App() {
         console.log(e);
       });
   }, [city]);
+
   return (
-    <div className="bg-slate-800 h-screen flex justify-center  items-start">
-      <div className="w-1/5 h-1/3 mt-40">
+    <div className="bg-slate-800  flex flex-col justify-center items-center md:flex-row md:justify-center md:items-start">
+      <div className="w-full md:w-1/5 h-1/3 mt-40 md:mt-0">
         {weatherData && (
           <Temperature
             setCity={setCity}
@@ -40,7 +41,7 @@ function App() {
           />
         )}
       </div>
-      <div className="w-1/3 h-1/3 mt-40 p-10 grid grid-cols-2 gap-6">
+      <div className="w-full md:w-1/3 h-1/3 mt-40 p-10 grid grid-cols-1 md:grid-cols-2 gap-6">
         <h1 className="text-slate-200 text-2xl col-span-2">
           Today's Highlights
         </h1>
