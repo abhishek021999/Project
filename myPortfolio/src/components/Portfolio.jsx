@@ -2,22 +2,36 @@ import React from "react";
 import youtube from '../assets/project/youtube.png'
 import weatherapp from '../assets/project/weatherapp.png'
 import sugar_Cosmatics from '../assets/project/sugar_Cosmatics.png'
+import kfc from '../assets/kfc.png'
+import sephora from '../assets/sephora.png'
 const Portfolio = () => {
   const portfolios = [
     {
-      id: 1,
+      id:1,
+      src:kfc,
+      Demo:"https://kfc-website.vercel.app/",
+      code:"https://github.com/abhishek021999/KFC_Website/tree/main/Kfc"
+    },
+    {
+      id:2,
+      src:sephora,
+      Demo:"https://sephora-clone-e-commerce.netlify.app/",
+      code:"https://github.com/abhishek021999/Sephora-Clone"
+    },
+    {
+      id: 3,
       src:youtube,
       Demo:'https://https-youtube-india.netlify.app/',
       code:'https://github.com/abhishek021999/Project/tree/main/Youtube_Clone'
     },
     {
-      id: 2,
+      id: 4,
       src:weatherapp,
       Demo:'https://weather-app-abhi-india.netlify.app/',
       code:'https://github.com/abhishek021999/Project/tree/main/WeatherApp-Abhi'
     },
     {
-      id: 3,
+      id: 5,
       src:sugar_Cosmatics,
       Demo:'https://65e41a9f7dacf14af3f978dc--poetic-choux-fefb10.netlify.app/',
       code:'https://github.com/abhishek021999/Sugar-Cosmatic-Clone'
