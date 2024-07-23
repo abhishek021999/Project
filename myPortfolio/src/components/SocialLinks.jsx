@@ -31,7 +31,7 @@ const SocialLinks = () => {
           Mail <HiOutlineMail size={30} />
         </>
       ),
-      href: "mailto:aksingh171999@gmailcom",
+      href: "mailto:aksingh171999@gmail.com",
     },
     {
       id: 4,
@@ -43,13 +43,28 @@ const SocialLinks = () => {
       href: "/resume.pdf",
       style: "rounded-br-md",
       download: true,
+      target: "_blank",
     },
   ];
+
+  const handleLinkClick = (e, href, download) => {
+    if (download) {
+      e.preventDefault();
+      window.open(href, '_blank', 'noopener,noreferrer');
+      
+      const link = document.createElement('a');
+      link.href = href;
+      link.download = '';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
 
   return (
     <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
       <ul>
-        {links.map(({ id, child, href, style, download }) => (
+        {links.map(({ id, child, href, style, download, target }) => (
           <li
             key={id}
             className={
@@ -61,9 +76,10 @@ const SocialLinks = () => {
             <a
               href={href}
               className="flex justify-between items-center w-full text-white"
-              download={download}
-              target="_blank"
-              rel="noreferrer"
+              // download={download}
+              target={"_blank"}
+              // rel="noopener noreferrer"
+              onClick={(e) => handleLinkClick(e, href, download)}
             >
               {child}
             </a>

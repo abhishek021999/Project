@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from '../assets/heroImage.png'
+import heroImage from '../assets/heroImage.jpeg';
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
@@ -10,17 +10,17 @@ const Home = () => {
       className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
+        <div className="flex flex-col justify-center  text-center md:text-left mt-[100px] sm:mt-[200px]">
+          <h2 className="text-4xl lg:mt-[-100px] sm:text-7xl font-bold text-white">
             I'm a Frontend Developer
           </h2>
-          <p className="text-gray-500 py-4 max-w-md">
-            I have Practical experience of building and desgining software.
-            Currently, I love to work on web application using technologies like
-            React, Tailwind.
+          <p className="text-gray-500 py-4 max-w-md mx-auto md:mx-0">
+            I have practical experience in building and designing software.
+            Currently, I love to work on web applications using technologies like
+            React and Tailwind.
           </p>
 
-          <div>
+          <div className="flex justify-center md:justify-start">
             <Link
               to="portfolio"
               smooth
@@ -35,11 +35,11 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
+        <div className="mt-10  ">
           <img
             src={heroImage}
             alt="my profile"
-            className="rounded-2xl  mx-auto  w-full md:w-full h-[400px] "
+            className="rounded-2xl mx-auto w-3/3 md:w-full h-[300px] md:h-[400px]"
           />
         </div>
       </div>
