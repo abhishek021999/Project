@@ -12,7 +12,7 @@ const Contact = () => {
       setAlert({ visible: false, message: "" });
     }, 2000); 
   };
-
+// return 
   return (
     <div
       name="contact"
