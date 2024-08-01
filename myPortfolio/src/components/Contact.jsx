@@ -10,7 +10,7 @@ const Contact = () => {
     setAlert({ visible: true, message: `Copied: ${text}` });
     setTimeout(() => {
       setAlert({ visible: false, message: "" });
-    }, 2000); // Alert will be visible for 2 seconds
+    }, 2000); 
   };
 
   return (
